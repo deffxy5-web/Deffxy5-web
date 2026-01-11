@@ -187,7 +187,43 @@
                         <p>─ ✮ - ───────── - ✮ ─
   
   </div>
-  
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kotak Foto Saya</title>
+  <style>
+    .photo-box {
+      width: 300px;
+      height: 300px;
+      border: 3px solid #ff69b4; /* warna pink terang */
+      border-radius: 12px;
+      overflow: hidden;
+      margin: 20px auto;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .photo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* agar foto tetap proporsional */
+    }
+  </style>
+</head>
+<body>
+
+  <h2 style="text-align: center;">Foto Saya 📸</h2>
+
+  <div class="photo-box">
+    <!-- Ganti "foto-kamu.jpg" dengan nama file fotomu -->
+    <img src="https://files.catbox.moe/32sbvr.jpg" alt="Foto Anna">
+  </div>
+
+</body>
+</html>
+                            
     <script>
         // Simulasi player sederhana
         const videoPlayer = document.getElementById('videoPlayer');
